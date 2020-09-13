@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebContextManager">
+    <option name="state">
+      <map>
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/addcustomer.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/adminlogin.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/device/devicehome.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/device" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/device/devicelogin.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/device" />
+      </map>
+    </option>
+  </component>
+</project>
