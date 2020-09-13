@@ -1,24 +1,18 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: abhinacharya
-  Date: 6/15/20
-  Time: 9:25 PM
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Number of Police Station</title>
+    <title>View Police Station</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
-    <script src="${pageContext.request.contextPath}/resources/script/dataValidation.js"></script>
 </head>
-<body background="${pageContext.request.contextPath}/resources/img/bgimg11.jpg">
-<%@include file="adminHeader.jsp"%>
-<table>
+<body  background="${pageContext.request.contextPath}/resources/img/bgimg11.jpg">
+<%@include file="../header.jsp"%>
+<table align="center">
     <tr>
         <th>ID</th>
         <th>PoliceStationName</th>

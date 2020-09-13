@@ -16,18 +16,18 @@
 <%@include file="adminHeader.jsp"%>
 <div align="center">
     <h1>Add New Device</h1>
-    <form:form action="savedevice">
+    <form action="savedevice">
         <table>
             <tr>
                 <td>Device Name</td>
-                <td><form:input path="deviceName"/></td>
+                <td><input type="text" name="deviceName" required></td>
             </tr>
          <tr>
              <td></td>
              <td><input type="submit" value="add"></td>
          </tr>
         </table>
-    </form:form>
+    </form>
     </div>
 <%@include file="../footer.jsp"%>
     <script src="

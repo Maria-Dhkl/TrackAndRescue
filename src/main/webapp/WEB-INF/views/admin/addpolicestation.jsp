@@ -11,66 +11,28 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
 </head>
 <body  background="${pageContext.request.contextPath}/resources/img/bgimg11.jpg">
-
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <div class="container">
-        <a class="navbar-brand" href="#">
-            <img src="${pageContext.request.contextPath}/resources/img/logo1.png"  class="rounded-circle" alt="Responsive image">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:8080/TrackAndRescue/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="addCustomer">AddCustomer</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="viewcustomer">ViewCustomer</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="addPoliceStation">AddPoliceStation</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="viewpolicestation">ViewPoliceStation</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="adddevice">AddDevice</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="viewdevices">viewDevice</a>
-                </li>
-
-
-            </ul>
-        </div>
-    </div>
-</nav>
+<%@include file="../header.jsp"%>
 <div align="center">
-        <form:form action="savepolicestation" method="post">
+        <form action="savepolicestation" method="post">
             <table>
                 <tr>
                     <td>Police Station Name: </td>
-                    <td><form:input path="policeStationName"/></td>
+                    <td><input type="text" name="policeStationName" required></td>
                 </tr>
                 <tr>
                     <td>X Coordinate</td>
-                    <td><form:input path="addressXCoordinate"/></td>
+                    <td><input type="text" name="addressXCoordinate" required></td>
                 </tr>
                 <tr><td>Y Coordinate</td>
-                    <td><form:input path="addressYCoordinate"/></td>
+                    <td><input type="text" name="addressYCoordinate" required></td>
                 </tr>
                 <tr>
                     <td>UserName:</td>
-                    <td><form:input path="userName"/></td>
+                    <td><input type="text" name="userName" required></td>
                 </tr>
                 <tr>
                     <td>Password: </td>
-                    <td><form:password path="password"/></td>
+                    <td><input type="password" path="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required></td>
                 </tr>
                 <tr>
                     <td></td>
@@ -78,11 +40,9 @@
                 </tr>
             </table>
 
-        </form:form>
+        </form>
 </div>
-<div class="jumbotron text-center" style="margin-bottom:0">
-    <small>&copy; Copyright 2020, Track and Rescue IOT based Project</small>
-</div>
+<%@include file="../footer.jsp"%>
 <script src="
                 https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>

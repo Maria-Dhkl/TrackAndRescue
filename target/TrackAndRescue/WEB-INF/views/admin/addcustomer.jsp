@@ -9,44 +9,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
-    <script src="${pageContext.request.contextPath}/resources/script/dataValidation.js"></script>
 </head>
 <body  background="${pageContext.request.contextPath}/resources/img/bgimg11.jpg">
 <%@include file="adminHeader.jsp"%>
     <div align="center">
         <h1>Add New Customer</h1>
-        <form:form method="post" action="savecustomer">
+        <form method="Post" action="savecustomer">
             <table >
                 <tr>
                     <td>First Name : </td>
-                    <td><form:input path="firstName"  /></td>
+                    <td><input type="text" name="firstName" required></td>
                 </tr>
                 <tr>
                     <td>Last Name:</td>
-                    <td><form:input path="lastName" /></td>
+                    <td><input type="text" name="lastName" required></td>
                 </tr>
                 <tr>
                     <td>Email :</td>
-                    <td><form:input path="email" /></td>
+                    <td><input type="email" name="email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" title="Must be in the format abc@xyz.def" required></td>
                 </tr>
                 <tr>
                     <td>Password :</td>
-                    <td><form:password path="password" /></td>
+                    <td><input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required></td>
                 </tr>
                 <tr>
                     <td>Personnel Mobile Number :</td>
-                    <td><form:input path="personnelNumber" /></td>
+                    <td><input type="text" name="personnelNumber" pattern="^\d{10}$" title="Must be 10 digits" required></td>
                 </tr>
                 <tr>
                     <td>FamilyMember Name :</td>
-                    <td><form:input path="familyMemberName" /></td>
+                    <td><input type="text" name="familyMemberName" required></td>
                 </tr>
                 <tr>
                     <td>FamilyMember Mobile Number :</td>
-                    <td><form:input path="familyMemberNumber" /></td>
+                    <td><input type="text" name="familyMemberNumber" pattern="^\d{10}$" title="Must be 10 digits" required></td>
                 </tr><tr>
                     <td>Device Id :</td>
-                    <td><form:input path="dId" /></td>
+                    <td><input type="number" name="dId" required></td>
                 </tr>
 
                 <tr>
@@ -54,7 +53,7 @@
                     <td><input type="submit" value="Save" /></td>
                 </tr>
             </table>
-        </form:form>
+        </form>
     </div>
 <%@include file="../footer.jsp"%>
 <script src="

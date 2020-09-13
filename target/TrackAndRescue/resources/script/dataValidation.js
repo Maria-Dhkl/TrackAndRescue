@@ -1,17 +1,20 @@
 function validation() {
-    let email = document.getElementById("email");
-    let password = document.getElementById("password");
-    let phoneNumber = document.getElementById("personnelNumber");
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    let phoneNumberOfUser = document.getElementById("personnelNumber").value;
+    let phoneNumberOfFamilyMember = document.getElementById("familyMemberNumber").value;
 
-    emailValidation(email);
-    passwordValidation(password);
-    phoneNumberValidation(phoneNumber);
-
-    if (emailValidation(email) && passwordValidation(password)){
-        return true;
+    if(email!=null) {
+        emailValidation(email);
     }
-    if (emailValidation(email) && passwordValidation(password) && passwordValidation(phoneNumber)){
-        return true;
+    if (password!=null){
+        passwordValidation(password);
+    }
+    if(phoneNumberOfUser!=null){
+        phoneNumberValidation(phoneNumberOfUser);
+    }
+    if(phoneNumberOfFamilyMember!=null){
+        phoneNumberValidation(phoneNumberOfFamilyMember);
     }
 }
     function emailValidation(email) {
