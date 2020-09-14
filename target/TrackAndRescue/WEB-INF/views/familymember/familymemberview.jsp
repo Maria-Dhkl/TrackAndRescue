@@ -120,7 +120,7 @@
 <div id="map"></div>
 <%@include file="../footer.jsp"%>
 <script>
-    let map = L.map('map').setView([${usercoordinates.xCoordinates},${usercoordinates.yCoordinates}], 30);
+    let map = L.map('map').setView([${usercoordinates.xCoordinates},${usercoordinates.yCoordinates}], 20);
     L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=gRfDOw9mrfxrXq2cRfWt',{
         attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
     }).addTo(map);
@@ -128,6 +128,7 @@
     let marker = L.marker([${usercoordinates.xCoordinates}, ${usercoordinates.yCoordinates}]).addTo(map);
 </script>
 </body>
+</html>
 
 
 

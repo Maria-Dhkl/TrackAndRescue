@@ -7,7 +7,7 @@ let timer;
 let status = 0;
 
 getLocation();
-setTimeout(function(){getLocation();}, 10000);
+setTimeout(function(){getLocation.reload(1);}, 10000);
 
 function countFunction(){
     count++;

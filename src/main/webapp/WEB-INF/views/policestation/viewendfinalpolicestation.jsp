@@ -8,14 +8,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
-
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script >
         setTimeout(function(){
             window.location.reload(1);
         }, 10000);
     </script>
     <meta http-equiv="refresh" content="5; URL=http://localhost:8080/TrackAndRescue/viewendfinalpolicestation">
-
+    <style type="text/css">
+        #map{
+            height: 200px;
+            width: 200px;
+        }
+    </style>
 </head>
 <body  background="${pageContext.request.contextPath}/resources/img/bgimg.jpg">
 
@@ -45,6 +51,7 @@
 
             </ul>
         </div>
+    </div>
 </nav>
 <div align="center">
 <h2>Police station id is: ${policeStationId}</h2>
@@ -60,7 +67,16 @@
     userid: ${individual_case.uid} <br>
     Active: ${individual_case.active } <br>
     x_coordinate:${individual_case.xCoordinates} <br>
-    y_coordinate: ${individual_case.yCoordinates}
+    y_coordinate: ${individual_case.yCoordinates} <br>
+    <div id="map"></div>
+    <script>
+        let map = L.map('map').setView([${individual_case.yCoordinates},${individual_case.xCoordinates}], 20);
+        L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=gRfDOw9mrfxrXq2cRfWt',{
+            attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
+        }).addTo(map);
+
+        let marker = L.marker([${individual_case.yCoordinates}, ${individual_case.xCoordinates}]).addTo(map);
+    </script>
 </div>
 </div>
 </c:forEach>
