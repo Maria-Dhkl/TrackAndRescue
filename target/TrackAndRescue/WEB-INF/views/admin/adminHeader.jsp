@@ -20,22 +20,22 @@
                     <a class="nav-link" href="http://localhost:8080/TrackAndRescue/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="addCustomer">AddCustomer</a>
+                    <a class="nav-link" href="addCustomer">Add Customer</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="viewcustomer">ViewCustomer</a>
+                    <a class="nav-link" href="viewcustomer">View Customer</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="addPoliceStation">AddPoliceStation</a>
+                    <a class="nav-link" href="addPoliceStation">Add PoliceStation</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="viewpolicestation">ViewPoliceStation</a>
+                    <a class="nav-link" href="viewpolicestation">View PoliceStation</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="adddevice">AddDevice</a>
+                    <a class="nav-link" href="adddevice">Add Device</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="viewdevices">viewDevice</a>
+                    <a class="nav-link" href="viewdevices">View Device</a>
                 </li>
 
 

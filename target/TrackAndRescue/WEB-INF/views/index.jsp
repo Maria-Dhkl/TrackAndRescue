@@ -11,7 +11,7 @@
 <%@include file="header.jsp"%>
         <div class="container">
 
-            <h1>Welcome to Track and Rescue Home Page
+            <h1>Welcome!
             </h1>
             <%--<p><a href="#">Click Here</a>To go to UserListPage</p>--%>
 

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
 </head>
-<body  background="${pageContext.request.contextPath}/resources/img/bgimg11.jpg">
+<body  background="${pageContext.request.contextPath}/resources/img/bgimg11.jpg" style="overflow-x: hidden;">
 <%@include file="adminHeader.jsp"%>
 
     <div align="center">

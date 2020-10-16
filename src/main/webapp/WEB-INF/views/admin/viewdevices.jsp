@@ -10,12 +10,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
 </head>
-<body  background="${pageContext.request.contextPath}/resources/img/bgimg11.jpg">
+<body  background="${pageContext.request.contextPath}/resources/img/backgroundview.jpg">
 <%@include file="adminHeader.jsp"%>
 <div align="center">
     <h1>View Devices</h1>
-<table>
-    <tr><b>Note:Here 1 denotes that device is available</b></tr>
+    <p><b>Note:Here 1 denotes that device is available</b></p>
+<table border="2" width="70%" cellpadding="2">
     <tr>
         <th>Device Id</th>
         <th>Device Name</th>
@@ -33,7 +33,7 @@
     </tr>
     </c:forEach>
 </table>
-    <p>Add new device<a href="adddevice">Click here</a></p>
+    <p>Add new device <a href="adddevice">Click here</a></p>
 <%--    <table>--%>
 <%--        <tr><b>Note:Here only available device is shown</b></tr>--%>
 <%--        <tr>--%>
